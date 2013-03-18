@@ -27,13 +27,8 @@ if( $erros!=0 )
     redirecionarPagina(SITE_URL . "/?secao=cadastro&erroCadastro=sim");
 }
 
-// Tudo correto. Monta o array com os dados do contato
-$contato[] = $_POST["nome"]; // 0
-$contato[] = $_POST["email"]; // 1
-$contato[] = $_POST["telefone"]; // 2
-
 // Passa o array $contato como parâmetro para a função gravarContato()
-if( gravaContato($contato) )
+if( gravaContato($_POST) )
 {
     // Contato gravado com sucesso. Volta para a página principal (index) do site.
     redirecionarPagina(SITE_URL);

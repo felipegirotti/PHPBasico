@@ -12,12 +12,12 @@
     <tbody>
         
         <!-- Itera sobre os contatos lidos do arquivo de texto -->
-        <?php foreach( lerContatos() as $indice => $contato ): ?>
+        <?php foreach( lerContatos() as $contato ): ?>
         <tr>
-            <td><?=$indice;?></td>
-            <td><?=$contato[0]; // Nome ?></td>
-            <td><?=$contato[1]; // E-mail ?></td>
-            <td><?=$contato[2]; // Telefone ?></td>
+            <td><?=$contato['id'];?></td>
+            <td><?=$contato['nome']; // Nome ?></td>
+            <td><?=$contato['email']; // E-mail ?></td>
+            <td><?=$contato['telefone']; // Telefone ?></td>
         </tr>
         <?php endforeach; ?>
         
